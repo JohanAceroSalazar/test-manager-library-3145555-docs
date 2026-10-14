@@ -37,7 +37,7 @@ A single module (`src/Library.Bootstrap/Composition/PortBindings.cs`) is where a
 ## Article V — The schema belongs to migrations
 
 The `infra` repository starts an **empty** engine. All DDL (tables, indexes, constraints, extensions, and seed data) lives in
-application migrations (EF Core migrations). See [ADR-001](adr/adr-001-propiedad-del-esquema.md).
+application migrations (EF Core migrations). See [ADR-001](adr/adr-001-schema-ownership.md).
 **Verification:** `infra` contains no `CREATE TABLE`.
 
 ## Article VI — The database enforces invariants it can enforce
@@ -54,7 +54,7 @@ Loan status (`open`, `overdue`, `closed`) and days late are calculated. There is
 ## Article VIII — Snapshotted values do not follow the catalog
 
 A loan item keeps the title, ISBN, and category from the time of the loan. No report reads them from the live catalog.
-**Verification:** a test renames a book after lending it and verifies that the report retains the previous title ([ADR-004](adr/adr-004-reporte-agregado-y-congelado.md)).
+**Verification:** a test renames a book after lending it and verifies that the report retains the previous title ([ADR-004](adr/adr-004-aggregated-and-snapshot-reporting.md)).
 
 ## Article IX — No secret enters the repository or a log
 
