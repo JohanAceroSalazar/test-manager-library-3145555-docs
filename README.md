@@ -1,71 +1,74 @@
 # test-manager-library-3145555-docs
 
-> **Prueba técnica · Ficha ADSO 3145555**
-> Horario: **miércoles 14 de octubre de 2026, de 6:50 a. m. a 11:00 a. m.** (hora Colombia). Entrega a las **11:00 a. m.**
+> **Technical assessment · ADSO Cohort 3145555**
+> Schedule: **Wednesday, October 14, 2026, from 6:50 a.m. to 11:00 a.m.** (Colombia time). Submission is due at **11:00 a.m.**
 
-Este repositorio contiene el **spec** de *Manager Library*. Es el único con contenido: los otros cinco empiezan vacíos.
+This repository contains the *Manager Library* **specification**. It is the only repository with content; the other five start empty.
 
-## Instrucciones
+## Instructions
 
-Cada aprendiz debe **crear el fork** de los seis repositorios del proyecto y **resolver el proyecto
-con el spec planteado**.
+Each learner must **fork** the project's six repositories and **complete the project using the
+provided specification**.
 
-1. Hacer fork, a su cuenta de GitHub, de cada repositorio de la tabla del final.
-2. Leer el spec en [`test-manager-library-3145555-docs`](https://github.com/code-sena/test-manager-library-3145555-docs).
-   Se entrega en dos versiones: `spec-python/` y `spec-.net/`.
-3. Desarrollar en los forks.
+1. Fork each repository in the table at the end to your GitHub account.
+2. Read the specification in [`test-manager-library-3145555-docs`](https://github.com/code-sena/test-manager-library-3145555-docs).
+   It is provided in two versions: `spec-python/` and `spec-.net/`.
+3. Develop the solution in the forks.
 
-## El reto se desarrolla con React y PHP (Laravel)
+## The challenge uses Laravel, React, PostgreSQL 16, and Docker Compose
 
-El spec está escrito para Python y para .NET, pero el reto **no** se hace en esos lenguajes:
+The challenge's mandatory stack is:
 
-| Capa | Tecnología del reto |
+| Layer | Challenge technology |
 |---|---|
+| Backend | PHP with Laravel |
 | Frontend | React |
-| Backend | PHP con Laravel |
+| Database | PostgreSQL 16 |
+| Infrastructure | Docker Compose |
 
-Lo que el spec define sobre el negocio —historias, criterios de aceptación, reglas, contrato de la
-API, modelo de datos— se respeta. Lo que define sobre la tecnología se traduce a React y Laravel.
+The `spec-python/` and `spec-.net/` directories are reference specifications; they do not require
+implementing Python or .NET. The technology adaptation to the mandatory stack preserves the
+business rules, data model, HTTP contract, and acceptance criteria.
 
-## La prueba no consiste en escribir el código
+## The assessment is not about writing code
 
-El propósito principal es ver la **capacidad de desempeño con SDD** (*Spec-Driven Development*,
-desarrollo guiado por especificación): cómo se lee, se interpreta y se aplica una especificación
-para llevarla a un stack distinto. El código es el medio, no el fin.
+Its main purpose is to assess **Spec-Driven Development (SDD)** capability: how a specification is
+read, interpreted, and applied to a different stack. Code is the means, not the end.
 
-## Entrega
+## Submission
 
-Cuenta lo que quede **subido a los forks antes de las 11:00 a. m.** Lo que llegue después no se revisa.
-No hay prórroga: suban avances parciales con commits pequeños durante la prueba.
+Only work **pushed to the forks before 11:00 a.m.** counts. Work submitted afterward will not be reviewed.
+There are no extensions: push partial progress through small commits during the assessment.
 
-## Qué contiene este repositorio
+## Repository contents
 
-| Carpeta | Contenido |
+| Directory | Contents |
 |---|---|
-| [`spec-python/`](spec-python/) | El spec de Manager Library escrito para un backend Python |
-| [`spec-.net/`](spec-.net/) | El mismo sistema especificado para un backend .NET |
+| [`spec-python/`](spec-python/) | Reference specification for Manager Library written for a Python backend |
+| [`spec-.net/`](spec-.net/) | Reference specification for the same system written for a .NET backend |
 
-Las dos versiones describen el **mismo producto** (las mismas historias, reglas de negocio y
-endpoints); cambian las decisiones de tecnología. Ninguna de las dos es el stack del reto.
+Both references describe the **same product** (the same user stories, business rules, data model,
+HTTP contract, acceptance criteria, and endpoints); only the technology decisions differ. Neither
+is the challenge's mandatory stack.
 
-## Cómo se lee el spec
+## How to read the specification
 
-En cualquiera de las dos carpetas, en este orden:
+Read either directory in this order:
 
-1. `constitution.md` — principios innegociables.
-2. `spec.md` — qué debe hacer el sistema: actores, historias, criterios de aceptación, reglas de negocio.
-3. `plan.md`, `architecture.md` y `arquitectura-panoramica.md` — cómo se construye.
-4. `data-model.md` y `api-contract.md` — el modelo de datos y el contrato de la API.
-5. `tasks.md` — qué hay que hacer y con qué evidencia se da por hecho.
-6. `adr/` — las decisiones de arquitectura, con sus alternativas y consecuencias.
+1. `constitution.md` — non-negotiable principles.
+2. `spec.md` — what the system must do: actors, user stories, acceptance criteria, and business rules.
+3. `plan.md`, `architecture.md`, and `arquitectura-panoramica.md` — how it is built.
+4. `data-model.md` and `api-contract.md` — the data model and API contract.
+5. `tasks.md` — what must be done and the evidence required to consider it complete.
+6. `adr/` — architecture decisions, their alternatives, and consequences.
 
-## Los seis repositorios
+## The six repositories
 
-| Repositorio | Qué va ahí |
+| Repository | Contents |
 |---|---|
-| [`test-manager-library-3145555-docs`](https://github.com/code-sena/test-manager-library-3145555-docs) | El spec: `spec-python/` y `spec-.net/` |
-| [`test-manager-library-3145555-api`](https://github.com/code-sena/test-manager-library-3145555-api) | Backend en PHP (Laravel) |
-| [`test-manager-library-3145555-app`](https://github.com/code-sena/test-manager-library-3145555-app) | Frontend en React |
-| [`test-manager-library-3145555-page`](https://github.com/code-sena/test-manager-library-3145555-page) | Sitio público estático de presentación |
-| [`test-manager-library-3145555-infra`](https://github.com/code-sena/test-manager-library-3145555-infra) | Contenedores, red, volúmenes y motor de base de datos vacío |
-| [`test-manager-library-3145555-tool`](https://github.com/code-sena/test-manager-library-3145555-tool) | Utilidades: sembrador de datos de demostración |
+| [`test-manager-library-3145555-docs`](https://github.com/code-sena/test-manager-library-3145555-docs) | The specification: `spec-python/` and `spec-.net/` |
+| [`test-manager-library-3145555-api`](https://github.com/code-sena/test-manager-library-3145555-api) | PHP backend (Laravel) |
+| [`test-manager-library-3145555-app`](https://github.com/code-sena/test-manager-library-3145555-app) | React frontend |
+| [`test-manager-library-3145555-page`](https://github.com/code-sena/test-manager-library-3145555-page) | Public static presentation site |
+| [`test-manager-library-3145555-infra`](https://github.com/code-sena/test-manager-library-3145555-infra) | Containers, network, volumes, and an empty database engine |
+| [`test-manager-library-3145555-tool`](https://github.com/code-sena/test-manager-library-3145555-tool) | Utilities: demonstration data seeder |
