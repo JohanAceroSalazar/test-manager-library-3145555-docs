@@ -11,9 +11,9 @@ This is a .NET reference plan; the mandatory implementation stack is PHP/Laravel
 | D-01 | Language and runtime | .NET 8 / C# 12 | Reference specification stack |
 | D-02 | HTTP framework | ASP.NET Core (Minimal API) | Contract in [`api-contract.md`](api-contract.md) |
 | D-03 | Persistence | EF Core 8 + EF migrations on PostgreSQL 16 | The schema belongs to migrations (ADR-001) |
-| D-04 | Concurrency | Version witness per book + range `CHECK` ([ADR-002](adr/adr-002-concurrencia-optimista.md)) | Last copy (RNF-2) |
+| D-04 | Concurrency | Version witness per book + range `CHECK` ([ADR-002](adr/adr-002-optimistic-concurrency.md)) | Last copy (RNF-2) |
 | D-05 | Dates | UTC instants (`timestamptz`); the clock is a port (`Clock`) | Test overdue items without waiting 14 days |
-| D-06 | Reporting | A single aggregate query through a read port ([ADR-004](adr/adr-004-reporte-agregado-y-congelado.md)) | Stable and inexpensive |
+| D-06 | Reporting | A single aggregate query through a read port ([ADR-004](adr/adr-004-aggregated-and-snapshot-reporting.md)) | Stable and inexpensive |
 | D-07 | Value objects | `Isbn`, `Quantity`, `DocumentNumber`, `DateRange`: live within their owner's row, with no table | They have no identity |
 | D-08 | Covers | Binary in external storage (disk locally, S3 in production); the database stores only `cover_key` | Opaque key, never a path |
 | D-09 | Passwords | BCrypt (factor 12) behind the `PasswordHasher` port; the domain never sees the plaintext password | Article IX |
